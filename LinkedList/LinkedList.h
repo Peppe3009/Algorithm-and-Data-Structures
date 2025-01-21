@@ -36,7 +36,6 @@ Node<T> *LinkedList<T> ::getHead()
 template <class T>
 void LinkedList<T> ::insertAtHead(T value)
 {
-
     Node<T> *newNode = new Node(value);
     if (this->head == nullptr)
     {
@@ -49,6 +48,7 @@ void LinkedList<T> ::insertAtHead(T value)
     newNode->setNext(this->head);
     this->head = newNode;
     this->length++;
+    
 }
 
 /**
@@ -114,6 +114,48 @@ void LinkedList<T> ::insertAtIndex(T value, int index)
         this->length++;
     }
 }
+
+/**
+ * @brief Remove a specific element from the list.
+ * 
+*/
+
+template <class T>
+void LinkedList<T> :: remove(T element)
+{
+    if (this->isEmpty())
+    {
+        cerr << "ERROR: List is empty." << endl;
+        return;
+    }
+
+    if (this->head->getValue() == element){
+        this->removeAtHead();
+        return;
+    }
+    
+    Node <T>*sentinel = this->head;
+    Node <T>*deletedNode = new Node<T>();
+    while(sentinel->getNext() != nullptr) {
+        if (sentinel->getValue() == element) {
+            deletedNode = sentinel;
+        }
+        sentinel= sentinel->getNext();
+    }
+
+    if (deletedNode->isNull()){
+        cerr << "ERROR: Element not in list." << endl;
+        return;
+    }
+
+
+    Node <T>*precNode = deletedNode->getPrev();
+    Node <T>*nextNode = deletedNode->getNext();
+    precNode->setNext(nextNode);
+    nextNode->setPrev(precNode);
+    delete(deletedNode);
+}
+
 
 /**
  * @brief Remove the element at head.

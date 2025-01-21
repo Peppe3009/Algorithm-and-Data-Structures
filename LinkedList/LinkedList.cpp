@@ -23,6 +23,7 @@ public:
     void insertAtHead(T);
     void insertAtIndex(T, int);
     void insertAtEnd(T);
+    void remove(T);
     void removeAtHead();
     void removeAtIndex(int);
     void removeAtEnd();
