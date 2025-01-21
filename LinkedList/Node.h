@@ -47,3 +47,9 @@ Node<T> *Node<T>::getPrev()
 {
     return this->prev;
 }
+
+template <class T>
+bool Node<T>::isNull()
+{
+    return this->prev == nullptr && this->next == nullptr ? true : false;
+}

@@ -15,4 +15,5 @@ public:
     T getValue();
     Node<T> *getPrev();
     Node<T> *getNext();
+    bool isNull();
 };
