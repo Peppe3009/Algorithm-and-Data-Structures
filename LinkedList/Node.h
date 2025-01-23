@@ -51,5 +51,5 @@ Node<T> *Node<T>::getPrev()
 template <class T>
 bool Node<T>::isNull()
 {
-    return this->prev == nullptr && this->next == nullptr ? true : false;
+    return this->prev == nullptr && this->next == nullptr;
 }
