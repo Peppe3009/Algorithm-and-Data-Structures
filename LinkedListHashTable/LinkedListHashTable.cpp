@@ -24,7 +24,7 @@ public:
     LinkedListHashTable();
     LinkedListHashTable(int);
     void insert(T);
-    void insertVector(vector<T>);
+    void insert(vector<T>);
     void insertFromFile(string);
     void remove(T);
     void find(T);

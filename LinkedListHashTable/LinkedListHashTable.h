@@ -35,7 +35,7 @@ void LinkedListHashTable<T> ::insert(T value)
 }
 
 template<class T>
-void LinkedListHashTable<T> ::insertVector(vector<T> vector)
+void LinkedListHashTable<T> ::insert(vector<T> vector)
 {
     for (T element: vector)
     {
