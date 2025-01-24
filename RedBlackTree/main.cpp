@@ -6,9 +6,9 @@ using namespace std;
 int main()
 {
     RedBlackTree<int> alberoRB;
-    vector<int> vettore(10);
-    generate(vettore.begin(), vettore.end(), rand);
-    alberoRB.insert(vettore);
+    vector<int> vector(10);
+    generate(vector.begin(), vector.end(), rand);
+    alberoRB.insert(vector);
     alberoRB.insert(71);
     alberoRB.show();
     alberoRB.remove(55);
