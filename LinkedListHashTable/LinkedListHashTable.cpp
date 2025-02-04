@@ -7,10 +7,6 @@
 //**** DUE TO THE NATURE OF THE HASH FUNCTION THE CLASS DOESN'T WORK WITH std::string
 //**** WORKS FINE WITH ALL THE OTHER STANDARD TYPE THO
 
-/**
- * TODO: IMPLEMENT A HASH FUNCTION FOR std::string
- */
-
 
 template <class T>
 class LinkedListHashTable

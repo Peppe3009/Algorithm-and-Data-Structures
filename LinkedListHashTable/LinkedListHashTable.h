@@ -26,6 +26,13 @@ int LinkedListHashTable<T> ::hashFunction(T k)
     return floor(this->dim * (fmod(k * A, 1)));
 }
 
+template <>
+int LinkedListHashTable<string> ::hashFunction(string k)
+{
+    double A = 0.618033;
+    return floor(this->dim * (fmod(k.size() * A, 1)));
+}
+
 template<class T>
 void LinkedListHashTable<T> ::insert(T value)
 {
