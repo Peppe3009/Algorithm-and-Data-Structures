@@ -1,8 +1,9 @@
 #include "Node.cpp"
+#include <limits>
 template <class T>
 Node<T>::Node()
 {
-    this->value = -1;
+    this->value = numeric_limits<T>::min();
     this->left = nullptr;
     this->right = nullptr;
     this->parent = nullptr;
